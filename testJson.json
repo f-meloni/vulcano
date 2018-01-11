@@ -1,0 +1,10 @@
+{
+   "object_or_array": "array",
+   "empty": false,
+   "parse_time_nanoseconds": 127664,
+   "object": [{
+   		"is_true": true
+   }],
+   "validate": true,
+   "size": 3.2
+}
