@@ -3,11 +3,11 @@ require "vulcan/parsed_variable"
 
 module Vulcan
   class CodableGenerator
-    def generate_codable_file(json, className = nil)
+    def generate_codable_file(json, destination_folder, className = nil)
       variables = []
 
       json.each do |key, value|
-        parsed_object = parse_object(key, value)
+        parsed_object = parse_object(destination_folder, key, value)
 
         variables.push(parsed_object) unless parsed_object.nil?
       end
@@ -22,14 +22,14 @@ module Vulcan
       renderer = ERB.new(template)
       result = renderer.result(parsed_class.class_binding)
 
-      File.open("#{name}.swift", 'w') { |f| f.write(result) }
+      File.open("#{destination_folder}/#{name}.swift", 'w') { |f| f.write(result) }
     end
 
-    def parse_object(key, value)
-      return parse_object(key, value.first).array unless !value.is_a?(Array)
+    def parse_object(destination_folder, key, value)
+      return parse_object(destination_folder, key, value.first).array unless !value.is_a?(Array)
 
       if value.is_a?(Hash)
-        generate_codable_file(value, class_name_from_key(key))
+        generate_codable_file(value, destination_folder, class_name_from_key(key))
       end
 
       ParsedVariable.new(key, value)

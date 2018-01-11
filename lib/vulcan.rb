@@ -8,8 +8,9 @@ module Vulcan
   class Main
     def start
       json_path = ARGV[0]
+      destination_folder = ARGV[1].nil? ? "." : ARGV[1]
       json = JsonReader.new.read_from_file(json_path)
-      CodableGenerator.new.generate_codable_file(json)
+      CodableGenerator.new.generate_codable_file(json, destination_folder)
     end
   end
 end
