@@ -31,7 +31,11 @@ module Vulcano
     end
 
     def parse_object(destination_folder, key, value)
-      if value.is_a?(Hash) || value.is_a?(Array)
+      return nil if value.is_a?(Array) && value.size == 0
+      return parse_object(destination_folder, key, value.first).array if value.is_a?(Array)
+      return nil if value.nil?
+
+      if value.is_a?(Hash)
         generate_codable_file(value, destination_folder, class_name_from_key(key))
       end
 

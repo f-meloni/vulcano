@@ -18,14 +18,16 @@ module Vulcano
 end
 
 class String
-  def camel_case
-    return self if self !~ /_/ && self =~ /[A-Z]+.*/
-    split('_').map(&:capitalize).join
-  end
-
   def camel_case_lower
     split('_').inject([]) do |buffer, e|
       buffer.push(buffer.empty? ? e : e.capitalize)
     end.join
   end
+
+  def camel_case
+    camel_case_lower_string = camel_case_lower
+    letters = camel_case_lower.split('')
+    letters.first.upcase!
+    letters.join
+  end  
 end

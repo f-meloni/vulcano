@@ -14,6 +14,10 @@ module Vulcano
       original_name.camel_case_lower
     end
 
+    def array
+      ParsedVariable.new(original_name, nil, "[#{type}]")
+    end
+
     def type
       return @type unless @type.nil?
 
