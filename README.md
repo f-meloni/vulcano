@@ -1,4 +1,4 @@
-# Vulcan
+# Vulcano
 
 Ruby script to generate Swift Codable files from a JSON
 
@@ -7,7 +7,7 @@ Ruby script to generate Swift Codable files from a JSON
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'vulcan'
+gem 'vulcano'
 ```
 
 And then execute:
@@ -16,22 +16,22 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install vulcan
+    $ gem install vulcano
 
 ## Usage
 
 ```bash
-vulcan json_path [output_folder]
+vulcano json_path [output_folder]
 ```
 
 #### Examples
 
 ```
-vulcan /Users/franco/vulcan_json.json
+vulcano /Users/franco/vulcan_json.json
 ```
 
 ```
-vulcan /Users/franco/vulcan_json.json /Users/franco/output_folder
+vulcano /Users/franco/vulcano_json.json /Users/franco/output_folder
 ```
 
 ## Development
@@ -42,7 +42,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/f-meloni/vulcan. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/f-meloni/vulcano. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -50,5 +50,5 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Vulcan project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/vulcan/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Vulcano project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/vulcano/blob/master/CODE_OF_CONDUCT.md).
 
