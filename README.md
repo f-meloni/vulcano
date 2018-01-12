@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/vulcano.svg)](https://badge.fury.io/rb/vulcano)
+
 # Vulcano
 
 Ruby script to generate Swift Codable files from a JSON
@@ -27,7 +29,7 @@ vulcano json_path [output_folder]
 #### Examples
 
 ```
-vulcano /Users/franco/vulcan_json.json
+vulcano /Users/franco/vulcano_json.json
 ```
 
 ```
