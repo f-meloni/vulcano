@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "vulcan/version"
+require "vulcano/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "vulcan"
-  spec.version       = Vulcan::VERSION
+  spec.name          = "vulcano"
+  spec.version       = Vulcano::VERSION
   spec.authors       = ["Franco Meloni"]
   spec.email         = ["franco.meloni91@gmail.com"]
 
@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
     f.match(%r{^(test|spec|features)/})
   end
   spec.bindir        = "bin"
-  spec.executables   = ["vulcan"]
+  spec.executables   = ["vulcano"]
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.16"

@@ -1,7 +1,7 @@
-require "vulcan/parsed_class"
-require "vulcan/parsed_variable"
+require "vulcano/parsed_class"
+require "vulcano/parsed_variable"
 
-module Vulcan
+module Vulcano
   class CodableGenerator
     def generate_codable_file(json, destination_folder, className = nil)
       variables = []

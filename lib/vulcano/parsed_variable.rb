@@ -1,4 +1,4 @@
-module Vulcan
+module Vulcano
   class ParsedVariable
     attr_reader :original_name
     attr_reader :value

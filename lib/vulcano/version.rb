@@ -1,3 +1,3 @@
-module Vulcan
+module Vulcano
   VERSION = "0.2.0"
 end

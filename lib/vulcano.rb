@@ -1,10 +1,10 @@
-require "vulcan/version"
-require "vulcan/json_reader"
-require "vulcan/codable_generator"
+require "vulcano/version"
+require "vulcano/json_reader"
+require "vulcano/codable_generator"
 require "json"
 require "erb"
 
-module Vulcan
+module Vulcano
   class Main
     def start
       raise RuntimeError, 'The script has to be called with a JSON path' unless ARGV.length > 0

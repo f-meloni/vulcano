@@ -1,6 +1,6 @@
-require "vulcan/codable_key"
+require "vulcano/codable_key"
 
-module Vulcan
+module Vulcano
   class ParsedClass
     attr_reader :name
     attr_reader :variables

@@ -1,4 +1,4 @@
-module Vulcan
+module Vulcano
   class CodableKey
     attr_reader :original_name
     attr_reader :codable_name
