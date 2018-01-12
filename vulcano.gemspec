@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Codable files genertator}
   spec.description   = %q{This script takes in input a path to a json file and generates the Codable files for that json}
-  spec.homepage      = "https://github.com/f-meloni/vulcan"
+  spec.homepage      = "https://github.com/f-meloni/vulcano"
   spec.license       = "MIT"
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
