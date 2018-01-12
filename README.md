@@ -27,7 +27,7 @@ vulcano json_path [output_folder]
 #### Examples
 
 ```
-vulcano /Users/franco/vulcan_json.json
+vulcano /Users/franco/vulcano_json.json
 ```
 
 ```
