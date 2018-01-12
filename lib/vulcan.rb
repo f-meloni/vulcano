@@ -7,7 +7,7 @@ require "erb"
 module Vulcan
   class Main
     def start
-      raise RuntimeError, 'The script has to be called with a JSON path' unless ARGV.lenght > 0
+      raise RuntimeError, 'The script has to be called with a JSON path' unless ARGV.length > 0
 
       json_path = ARGV[0]
       destination_folder = ARGV[1].nil? ? "." : ARGV[1]
