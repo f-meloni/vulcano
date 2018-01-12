@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require 'vulcan'
+require 'vulcano'
 
-main = Vulcan::Main.new  
-main.start  
+main = Vulcano::Main.new.start

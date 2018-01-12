@@ -16,7 +16,7 @@ module Vulcano
 
       parsed_class = ParsedClass.new(name, variables)
 
-      spec = Gem::Specification.find_by_name('vulcan')
+      spec = Gem::Specification.find_by_name('vulcano')
       template = File.read("#{spec.gem_dir}/resources/TemplateFile.swift")
 
       renderer = ERB.new(template)
