@@ -4,6 +4,11 @@ require "vulcano/parsed_variable"
 module Vulcano
   class CodableGenerator
     def generate_codable_file(json, destination_folder, className = nil)
+      if json.is_a?(Array)
+        generate_codable_file(json.first, destination_folder, className)
+        return
+      end
+
       variables = []
 
       json.each do |key, value|
@@ -26,9 +31,7 @@ module Vulcano
     end
 
     def parse_object(destination_folder, key, value)
-      return parse_object(destination_folder, key, value.first).array unless !value.is_a?(Array)
-
-      if value.is_a?(Hash)
+      if value.is_a?(Hash) || value.is_a?(Array)
         generate_codable_file(value, destination_folder, class_name_from_key(key))
       end
 

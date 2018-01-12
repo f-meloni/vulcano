@@ -14,22 +14,23 @@ module Vulcano
       original_name.camel_case_lower
     end
 
-    def array
-      ParsedVariable.new(original_name, nil, "[#{type}]")
-    end
-
     def type
       return @type unless @type.nil?
 
-      case value
+      typeString(value)
+    end
+
+    def typeString(object)
+      case object
       when Integer then 'Int'
       when Float then 'Float'
       when String then 'String'
       when TrueClass then 'Boolean'
       when FalseClass then 'Boolean'
       when Hash then original_name.camel_case
+      when Array then "[#{typeString(object.first)}]"
       else
-        raise "Unknown type: #{value.class}"
+        raise "Unknown type: #{object.class}"
       end
     end
   end
