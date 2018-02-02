@@ -2,7 +2,7 @@
 
 # Vulcano
 
-Ruby script to generate Swift Codable files from a JSON
+Ruby script to generate Swift Codable files from a given JSON file
 
 ## Installation
 
@@ -35,7 +35,7 @@ vulcano /Users/franco/vulcano_json.json
 ```
 
 ```
-vulcano /Users/franco/vulcano_json.json /Users/franco/output_folder
+vulcano /Users/franco/vulcano_json.json -d /Users/franco/output_folder -n "ClassName"
 ```
 
 ## Development
