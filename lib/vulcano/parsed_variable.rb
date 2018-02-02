@@ -29,8 +29,8 @@ module Vulcano
       when Integer then 'Int'
       when Float then 'Float'
       when String then 'String'
-      when TrueClass then 'Boolean'
-      when FalseClass then 'Boolean'
+      when TrueClass then 'Bool'
+      when FalseClass then 'Bool'
       when Hash then original_name.camel_case
       when Array then "[#{typeString(object.first)}]"
       else
