@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Franco Meloni"]
   spec.email         = ["franco.meloni91@gmail.com"]
 
-  spec.summary       = %q{Swift Codable files genertator}
-  spec.description   = %q{This script generates Swift Codable files from a given JSON}
+  spec.summary       = %q{Swift Codable file genertator}
+  spec.description   = %q{This script generates Swift Codable files from a given JSON file}
   spec.homepage      = "https://github.com/f-meloni/vulcano"
   spec.license       = "MIT"
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
