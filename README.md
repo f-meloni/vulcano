@@ -23,8 +23,10 @@ Or install it yourself as:
 ## Usage
 
 ```bash
-vulcano json_path [output_folder]
+vulcano json_path [options]
 ```
+
+use `vulcano --help` to see the whole options list
 
 #### Examples
 
