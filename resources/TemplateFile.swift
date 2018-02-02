@@ -1,3 +1,9 @@
+//
+//  <%= @name %>.swift
+//
+//  Generated with Vulcano https://rubygems.org/gems/vulcano/.
+//
+
 class <%= @name %>: Codable {<% for @variable in @variables %>
     var <%= @variable.name %>: <%= @variable.type %><% end %><% if (@codable_keys != nil) then %>
     
