@@ -19,7 +19,7 @@ module Vulcano
 
       name = className.nil? ? 'Generated' : className
 
-      parsed_class = ParsedClass.new(name, variables, !(options[:public].nil?))
+      parsed_class = ParsedClass.new(name, variables, !(options[:public].nil?), options[:use_classes].nil?)
 
       spec = Gem::Specification.find_by_name('vulcano')
       template = File.read("#{spec.gem_dir}/resources/TemplateFile.swift")

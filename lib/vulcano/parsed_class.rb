@@ -6,12 +6,14 @@ module Vulcano
     attr_reader :variables
     attr_reader :codable_keys
     attr_reader :is_public
+    attr_reader :is_struct
 
-    def initialize(name, variables, is_public)
+    def initialize(name, variables, is_public, is_struct)
       @is_public = is_public
       @name = name
       @variables = variables
       @codable_keys = codable_keys
+      @is_struct = is_struct
     end
 
     def class_binding

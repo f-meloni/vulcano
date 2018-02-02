@@ -4,7 +4,7 @@
 //  Generated with Vulcano https://rubygems.org/gems/vulcano
 //
 
-<% if is_public then %>public <% end %>class <%= @name %>: Codable {<% for @variable in @variables %>
+<% if is_public then %>public <% end %><% if is_struct then %>struct<% else %>class<% end %> <%= @name %>: Codable {<% for @variable in @variables %>
     <% if is_public then %>public <% end %>var <%= @variable.name %>: <%= @variable.type %><% end %><% if (@codable_keys != nil) then %>
     
     enum CodingKeys: String, CodingKey { <% for @codable_key in @codable_keys %>

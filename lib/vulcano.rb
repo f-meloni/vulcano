@@ -32,8 +32,12 @@ module Vulcano
           options[:class_name] = class_name
         end
 
-        opts.on("-p", "--public", "Generates all the classes as public classes") do |is_public|
+        opts.on("-p", "--public", "Generates all the objects as public objects") do |is_public|
           options[:public] = is_public
+        end
+
+        opts.on("-c", "--use-classes", "Generates classes instead of structs") do |use_classes|
+          options[:use_classes] = use_classes
         end
       end.parse!
 
