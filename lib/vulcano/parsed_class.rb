@@ -5,8 +5,10 @@ module Vulcano
     attr_reader :name
     attr_reader :variables
     attr_reader :codable_keys
+    attr_reader :is_public
 
-    def initialize(name, variables)
+    def initialize(name, variables, is_public)
+      @is_public = is_public
       @name = name
       @variables = variables
       @codable_keys = codable_keys

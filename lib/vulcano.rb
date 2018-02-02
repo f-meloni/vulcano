@@ -15,7 +15,7 @@ module Vulcano
       json_path = ARGV[0]
       destination_folder = options[:destination_folder].nil? ? "." : options[:destination_folder]
       json = JsonReader.new.read_from_file(json_path)
-      CodableGenerator.new.generate_codable_file(json, destination_folder, options[:class_name])
+      CodableGenerator.new.generate_codable_file(json, destination_folder, options, options[:class_name])
     end
 
     def parse_options
@@ -30,6 +30,10 @@ module Vulcano
 
         opts.on("-n", "--class-name CLASS_NAME", String, "Name for the generated class (the default name is 'Generated')") do |class_name|
           options[:class_name] = class_name
+        end
+
+        opts.on("-p", "--public", "Generates all the classes as public classes") do |is_public|
+          options[:public] = is_public
         end
       end.parse!
 
