@@ -1,7 +1,7 @@
 //
 //  <%= @name %>.swift
 //
-//  Generated with Vulcano https://rubygems.org/gems/vulcano/.
+//  Generated with Vulcano https://rubygems.org/gems/vulcano
 //
 
 class <%= @name %>: Codable {<% for @variable in @variables %>
