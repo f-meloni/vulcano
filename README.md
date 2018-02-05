@@ -4,6 +4,8 @@
 
 Ruby script to generate Swift Codable files from a given JSON file
 
+If you like it please star it!
+
 ## Installation
 
 Add this line to your application's Gemfile:
